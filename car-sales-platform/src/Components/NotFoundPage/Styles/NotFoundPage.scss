@@ -1,0 +1,47 @@
+
+.NotFoundPage {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+
+  .NotFoundPage__message-block {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    .NotFoundPage__headline {
+      width: 100%;
+      //@extend %headline-3;
+      font-size: calc(25px + 1vw);
+      //color: $accent-color;
+      text-align: center;
+    }
+
+    .NotFoundPage__description {
+      display: inline-block;
+      align-items: center;
+      text-align: center;
+      font-size: calc(13px + .3vw);
+      line-height: 120%;
+      color: #262534;
+
+      .NotFoundPage__description-img {
+        height: 17px;
+        width: 17px;
+        object-fit: contain;
+        display: inline-flex;
+        align-self: center;
+        margin-top: calc(-0.63em / 2);
+        margin-bottom: calc(-0.5em / 2);
+      }
+    }
+  }
+}

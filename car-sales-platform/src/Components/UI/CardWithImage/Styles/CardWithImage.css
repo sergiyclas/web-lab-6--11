@@ -1,5 +1,5 @@
-.BestGoodsCard__image {
+.CardWithImage__image {
   filter: drop-shadow(15px 5px 4px rgba(0, 0, 0, 0.2)) drop-shadow(-15px 30px 10px rgba(0, 0, 0, 0.6));
 }
 
-/*# sourceMappingURL=BestGoodsCard.css.map */
+/*# sourceMappingURL=CardWithImage.css.map */

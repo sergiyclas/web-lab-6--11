@@ -1,0 +1,42 @@
+.NotFoundPage {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.NotFoundPage .NotFoundPage__message-block {
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.NotFoundPage .NotFoundPage__message-block .NotFoundPage__headline {
+  width: 100%;
+  font-size: calc(25px + 1vw);
+  text-align: center;
+}
+.NotFoundPage .NotFoundPage__message-block .NotFoundPage__description {
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+  font-size: calc(13px + 0.3vw);
+  line-height: 120%;
+  color: #262534;
+}
+.NotFoundPage .NotFoundPage__message-block .NotFoundPage__description .NotFoundPage__description-img {
+  height: 17px;
+  width: 17px;
+  object-fit: contain;
+  display: inline-flex;
+  align-self: center;
+  margin-top: -0.315em;
+  margin-bottom: -0.25em;
+}
+
+/*# sourceMappingURL=NotFoundPage.css.map */

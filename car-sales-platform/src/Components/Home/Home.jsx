@@ -1,8 +1,8 @@
-import "./Styles/Home.scss"
+import "./Styles/Home.css"
 
 import PreviewPage from "../PreviewPage/PreviewPage.jsx";
 import BestGoods from "../BestGoods/BestGoods.jsx";
-import backgroundImage from "./Images/mainBackground.jpeg";
+import backgroundImage from "./Images/mainBackground.png";
 
 function Home() {
     return (
