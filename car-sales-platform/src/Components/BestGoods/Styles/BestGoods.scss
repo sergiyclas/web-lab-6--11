@@ -1,0 +1,18 @@
+/* Styles/BestGoods.css */
+
+.BestGoods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 125px;
+  gap: 50px;
+}
+
+.BestGoods__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}

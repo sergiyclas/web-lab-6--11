@@ -1,0 +1,27 @@
+.Footer {
+  width: 100%;
+  padding: 20px;
+  background-color: #333;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.Footer__links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.Footer__links a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.Footer__links a:hover {
+  text-decoration: underline;
+}

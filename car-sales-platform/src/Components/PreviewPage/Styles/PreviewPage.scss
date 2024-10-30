@@ -1,0 +1,24 @@
+.PreviewPage {
+  min-height: 100vh;
+  color: #ffffff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 200px;
+
+  .PreviewPage__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .PreviewPage {
+    padding: 25px;
+  }
+}

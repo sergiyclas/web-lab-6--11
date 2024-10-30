@@ -1,0 +1,27 @@
+.Home {
+  background-size: cover;
+}
+.Home .Home__bg-group {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.Home .Home__bg-group .Home__background {
+  width: 100%;
+  object-fit: cover;
+}
+.Home .Home__bg-group .Home__background-layer {
+  background: linear-gradient(180deg, rgba(0, 28, 36, 0.5) 0%, rgba(132, 255, 0, 0) 80%, #dde8dc 98%);
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.Home * {
+  z-index: 2;
+}
+
+/*# sourceMappingURL=Home.css.map */
