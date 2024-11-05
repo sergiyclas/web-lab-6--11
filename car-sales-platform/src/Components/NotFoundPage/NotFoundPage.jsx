@@ -8,11 +8,11 @@ import {useLayoutEffect} from "react";
 import {Typography} from "@mui/material";
 
 const funnyPhrases = [
-    "Maybe you got lost",
-    "Where are you?",
+    "Maybe I got lost",
+    "Where am I?",
     "What do you mean?",
-    "Anything here 😐",
-    "Nothing 😶",
+    "Please help me 😐",
+    "I dunno😶",
     "*The roll field rolls across the screen* 🌵🐪"
 ];
 

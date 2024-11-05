@@ -59,4 +59,5 @@ function CatalogData({pending, error, data, totalPages, page, setPage}) {
     </>
 }
 
+
 export default CatalogData

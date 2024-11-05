@@ -7,7 +7,15 @@ import CatalogData from "../CatalogData/CatalogData.jsx";
 import {Box, Button, Grid2, Slider, TextField, Typography} from "@mui/material";
 import {FilterAlt} from "@mui/icons-material";
 import {Route, Routes} from "react-router-dom";
+
 import Car from "../Car/Car.jsx";
+// import mustang from "../BestGoods/Images/mustang_wiki.jpg";
+// import camaro from "../BestGoods/Images/camaro.jpg";
+// import charger from "../BestGoods/Images/charger.jpg";
+// { desc: "Super puper car", name: "Ford Mustang", image_url: mustang, backgroundColor: '#7C5840'},
+// { desc: "Really good car", name: "Chevrolet Camaro", image_url: camaro, backgroundColor: '#7C5840' },
+// { desc: "Recommend it, nice car", name: "Dodge Charger", image_url: charger, backgroundColor: '#7C5840' }
+
 
 
 function Catalog() {
@@ -20,7 +28,7 @@ function Catalog() {
     let [filter, setFilter] = useState({})
     let [data, setData] = useState([]);
     let [error, setError] = useState(null);
-    let [pending, setPending] = useState(true);
+    let [pending, setPending] = useState(false);
     let [totalPages, setTotalPages] = useState(0);
     let [maxPrice, setMaxPrice] = useState(0);
     let [maxSpeed, setMaxSpeed] = useState(0);

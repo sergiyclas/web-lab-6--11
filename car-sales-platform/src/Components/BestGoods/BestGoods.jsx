@@ -11,9 +11,9 @@ import {useEffect, useState} from "react";
 import gsap from "gsap";
 
 let cars = [
-    { desc: "Super puper car", name: "Ford Mustang", image_url: mustang, backgroundColor: '#7C5840'},
-    { desc: "Really good car", name: "Chevrolet Camaro", image_url: camaro, backgroundColor: '#7C5840' },
-    { desc: "Recommend it, nice car", name: "Dodge Charger", image_url: charger, backgroundColor: '#7C5840' }
+    { description: "Super puper car", name: "Ford Mustang", image_url: mustang, backgroundColor: '#7C5840'},
+    { description: "Really good car", name: "Chevrolet Camaro", image_url: camaro, backgroundColor: '#7C5840' },
+    { description: "Recommend it, nice car", name: "Dodge Charger", image_url: charger, backgroundColor: '#7C5840' }
 ];
 
 function BestGoods() {
@@ -65,14 +65,14 @@ function BestGoods() {
              justifyContent="center"
              gap="50px"
         >
-            <Grid2 container className="BestGoods__cards" columns={{xs: 1, sm: 2, lg: 4}} alignContent="center"
+            <Grid2 container className="BestGoods__cards" columns={{xs: 1, sm: 2, lg: 3}} alignContent="center"
                    spacing="35px">
                 {
                     cars.map((item, index) =>
                         <Grid2 key={`car-container-${index}`} size={1}
                                sx={{display: "flex", alignItems: "center", justifyContent: "center"}}>
                             <CardWithImage imageURL={item.image_url}
-                                           caption={item.desc}
+                                           caption={item.description}
                                            name={item.name}
                                            backgroundColor={item.backgroundColor}
                             />
@@ -85,40 +85,23 @@ function BestGoods() {
                 opened &&
                 <Box component="div">
                     <Typography className="BestGoods__text BestGoods__text_h2" component="h2" variant="h2"
-                                textAlign="center">More then 10k people trust us!</Typography>
+                                textAlign="center">Buy there and be happy!</Typography>
                     <Typography className="BestGoods__text BestGoods__text_p" component="p" variant="body2"
                                 textAlign="center">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi cumque fuga illum iste itaque
-                        nisi
-                        nobis non nostrum odio praesentium, provident quasi ratione repellendus saepe sapiente sint
-                        vitae.
-                        Ab accusantium architecto commodi consectetur dicta doloribus magni nostrum ratione repudiandae
-                        vero? Ab architecto cum delectus deserunt dolor dolore doloremque, ea earum eligendi explicabo,
-                        harum hic illum in ipsa iusto maxime nam non odio praesentium qui, quidem quis quod quos
-                        recusandae
-                        repellat sit tempore ut velit voluptatibus voluptatum? Blanditiis deserunt dicta eligendi, enim
-                        esse, et ipsam, iure maxime mollitia quas quisquam ullam voluptatum. Alias amet, autem
-                        consequuntur
-                        deleniti dicta distinctio doloremque eligendi eos error esse eum ex facere ipsa molestiae
-                        molestias
-                        mollitia nemo nobis obcaecati odio perferendis praesentium quas quia quod, sed tempora tempore
-                        temporibus unde veritatis voluptas voluptatibus! Eos illum ipsam magnam tempore. Accusantium,
-                        aliquam animi assumenda aut dignissimos eveniet exercitationem expedita ipsam iste molestias
-                        mollitia nemo nostrum obcaecati pariatur quae, reiciendis similique, soluta vitae. Accusamus
-                        alias,
-                        atque dicta enim labore perspiciatis porro provident, saepe sed tempora totam, ut. Asperiores
-                        commodi deserunt ducimus expedita fuga magnam nesciunt provident sequi. Aliquid aperiam
-                        architecto
-                        asperiores corporis culpa cum dolores harum impedit modi obcaecati, officiis possimus provident
-                        quae
-                        quia sed! Consequuntur ipsam minima similique.
+                        Our car dealership offers more than just cars – we provide a seamless and personalized experience, prioritizing your satisfaction every step of the way. When you choose to buy from us, you’re choosing a dealership that cares deeply about your needs, preferences, and peace of mind.
+
+                        Our diverse inventory features the latest models from trusted brands, each car thoroughly inspected to ensure the highest standards of safety and reliability. Whether you are looking for fuel efficiency, luxury, or performance, we have options that fit every budget and lifestyle. In addition to competitive pricing, we offer flexible financing solutions tailored to make your car-buying journey easy and stress-free.
+
+                        Our team is dedicated, knowledgeable, and ready to answer any questions to help you find the perfect match. We also provide exceptional after-sale services, from regular maintenance to any potential repairs, ensuring your car stays in top condition long after your purchase.
+
+                        At our dealership, we believe that buying a car should be an exciting and enjoyable experience, free of pressure and full of support. When you drive off our lot, you’ll feel confident in your choice, knowing you have made a valuable investment in a car that fits your lifestyle perfectly.
                     </Typography>
                 </Box>
             }
 
             <Button onClick={handleViewMoreBtnClick}
                     variant="contained">
-                {!opened ? "View more" : "Show less"}
+                {!opened ? "Are you trust me? Then - CLICK" : "No, please, don't push it"}
             </Button>
         </Box>
     )

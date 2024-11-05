@@ -25,10 +25,10 @@ function Footer() {
             >
                 <Grid2 size={1}>
                     <Typography component="h2" variant="h2">
-                        Branding stuff
+                        Only Top Class
                     </Typography>
                     <Typography component="p" variant="body2">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti error, est laboriosam magnam minus nisi.
+                        The best ever car shop! Visit us, visit our site, buy our cars, and BE HAPPY!
                     </Typography>
                 </Grid2>
                 <Grid2 size={1} display="flex" alignContent={{

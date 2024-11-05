@@ -1,7 +1,11 @@
 import "./Styles/PreviewPage.css"
 import {Box, Button, Typography} from "@mui/material";
+import {useNavigate} from "react-router-dom";
 
 function PreviewPage() {
+    let navigate = useNavigate();
+
+
     return (
         <Box maxWidth="xl" component="section" className="PreviewPage">
             <Box component="div" className="PreviewPage__content">
@@ -13,7 +17,7 @@ function PreviewPage() {
                 <Typography component="p" variant="subtitle1">
                     Buy one of best cars in one click!
                 </Typography>
-                <Button variant="contained" color="primary">
+                <Button onClick={() => navigate("/catalog")} variant="contained" color="primary">
                     Catalog
                 </Button>
             </Box>

@@ -4,7 +4,6 @@ import {Link, useLocation, useNavigate} from "react-router-dom"
 
 import whiteLogo from "../../assets/SVG/logoWhite.svg"
 import darkLogo from "../../assets/SVG/logoDark.svg"
-import cartIcon from "./SVG/cart.svg"
 import {ShoppingCart} from "@mui/icons-material";
 import {useMemo} from "react";
 

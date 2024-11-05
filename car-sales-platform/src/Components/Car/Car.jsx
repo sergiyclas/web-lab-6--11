@@ -96,7 +96,7 @@ function Car() {
                 <Grid2 size={{xs: 1, md: 6}} padding="25px 5px"
                        display="flex" gap={"25px"} flexDirection="column">
                     <Box component="div" display="flex" alignItems="center" gap="15px">
-                        <Chip label={`${data.weightInGram} gr`} color="success"/>
+                        <Chip label={`${data.weightInGram} kg`} color="success"/>
                         <Chip label={`${data.speedInMetersPerHour} m/h`} color="primary"/>
                     </Box>
                     <Box component="div">
