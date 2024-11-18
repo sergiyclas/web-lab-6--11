@@ -12,6 +12,7 @@ import NotFoundPage from "../NotFoundPage/NotFoundPage.jsx";
 import Catalog from "../Catalog/Catalog.jsx";
 
 import {Route, Routes} from "react-router-dom";
+import CartPage from "../CartPage/CartPage.jsx";
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                 <Route path="*" element={<NotFoundPage/>}/>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/catalog/*" element={<Catalog/>}/>
+                <Route path="/cart/*" element={<CartPage/>}/>
             </Routes>
             <Footer />
         </>

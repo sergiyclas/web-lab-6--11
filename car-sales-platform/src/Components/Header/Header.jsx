@@ -1,15 +1,21 @@
 import "./Styles/Header.css"
-import {Box, Button, Typography} from "@mui/material";
+import {Badge, Box, Button, Typography} from "@mui/material";
 import {Link, useLocation, useNavigate} from "react-router-dom"
 
 import whiteLogo from "../../assets/SVG/logoWhite.svg"
 import darkLogo from "../../assets/SVG/logoDark.svg"
 import {ShoppingCart} from "@mui/icons-material";
 import {useMemo} from "react";
+import {useSelector} from "react-redux";
 
 
 function Header() {
     let go = useNavigate();
+    let cart = useSelector(state => state.cart);
+
+    let count = useMemo(() =>
+            cart.reduce((acc, current) => acc + current.count, 0),
+        [cart]);
 
     let location = useLocation();
     let textColor = useMemo(() => {
@@ -37,14 +43,20 @@ function Header() {
                 </Link>
             </Box>
             <Box component="div" className="Header__nav" columnGap="5px" display="flex" alignItems="center">
-                <Button startIcon={<ShoppingCart color={textColor}/>}
-                        className="Header__cart-btn"
-                        variant="text"
-                        onClick={()=>go("/cart")}
-                        sx={{color: textColor}}
-                >
-                    My cart
-                </Button>
+                <Badge color="primary" badgeContent={count} anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'left',
+                }}>
+                    <Button startIcon={<ShoppingCart color={textColor}/>}
+                            className="Header__cart-btn"
+                            variant="text"
+                            onClick={()=>go("/cart")}
+                            sx={{color: textColor}}
+                            badge={2}
+                    >
+                        My cart
+                    </Button>
+                </Badge>
             </Box>
         </Box>
     )

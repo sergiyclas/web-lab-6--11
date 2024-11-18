@@ -20,6 +20,7 @@ import {
 import NotFoundPage from "../NotFoundPage/NotFoundPage.jsx";
 import {useEffect, useState} from "react";
 import {ArrowBackIosNew, ShoppingCart} from "@mui/icons-material";
+import {useDispatch} from "react-redux";
 
 function Car() {
     let {id} = useParams();
@@ -30,12 +31,12 @@ function Car() {
     let [error, setError] = useState(null);
     let [pending, setPending] = useState(true);
     let [countOfGoods, setCountOfGoods] = useState(1);
+    let dispatch = useDispatch();
 
     useEffect(() => {
         setPending(true);
         getCarById(id)
             .then(({data}) => {
-                console.log(data)
                 switch (data.status) {
                     case 200:
                         setData(data.body)
@@ -79,6 +80,18 @@ function Car() {
             <h2>{error?.header}</h2>
             <p>{error?.message}</p>
         </Box>
+    }
+
+    let handleAddToCartClick = () => {
+        dispatch({
+            type: "cart/addItem",
+            payload: {
+                ...data, count: countOfGoods
+            }
+        })
+
+        setCountOfGoods(1)
+        history.back();
     }
 
     return (
@@ -136,7 +149,7 @@ function Car() {
                                 fontWeight="bold">Price:</Typography> {countOfGoods > 1 && `${data.price.value} x ${countOfGoods} = `} {data.price.value * countOfGoods}{data.price.currency}
                 </Typography>
                 <ButtonGroup variant="contained" aria-label="actions">
-                    <Button startIcon={<ShoppingCart/>}>Add to cart</Button>
+                    <Button startIcon={<ShoppingCart/>} onClick={handleAddToCartClick}>Add to cart</Button>
                     <Button startIcon={<ArrowBackIosNew/>} variant="outlined" onClick={() => navigate("/catalog")}>Go
                         back</Button>
                 </ButtonGroup>

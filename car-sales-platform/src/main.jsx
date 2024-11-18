@@ -5,6 +5,9 @@ import App from './Components/App/App.jsx'
 
 import {BrowserRouter as Router} from "react-router-dom";
 import {createTheme, ThemeProvider} from "@mui/material";
+import {Provider} from 'react-redux'
+
+import store from "./features/store.js"
 
 const theme = createTheme({
     palette: {
@@ -45,10 +48,12 @@ const theme = createTheme({
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
-        <ThemeProvider theme={theme}>
-            <Router>
-                <App/>
-            </Router>
-        </ThemeProvider>
+        <Provider store={store}>
+            <ThemeProvider theme={theme}>
+                <Router>
+                    <App/>
+                </Router>
+            </ThemeProvider>
+        </Provider>
     </StrictMode>,
 )

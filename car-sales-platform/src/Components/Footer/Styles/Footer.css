@@ -1,23 +1,20 @@
 .Footer {
-    z-index: 2;
-    margin-top: 15px;
-  }
-  .Footer .Footer__credentials {
-    position: relative;
-  }
-  .Footer .Footer__credentials::after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -25px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #171717;
-    height: 1px;
-    border-radius: 3px;
-    width: 98%;
-    opacity: 0.5;
-  }
-  
-  /*# sourceMappingURL=Footer.css.map */
-  
+  z-index: 2;
+  margin-top: 15px;
+}
+.Footer .Footer__credentials {
+  position: relative;
+}
+.Footer .Footer__credentials::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #171717;
+  height: 1px;
+  border-radius: 3px;
+  width: 98%;
+  opacity: 0.5;
+}
