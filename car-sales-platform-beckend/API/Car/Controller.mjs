@@ -7,7 +7,6 @@ import mongoose from "mongoose";
 const CARS_PER_PAGE = 52;
 
 export const getCars = async (req, res) => {
-    // console.log(req.body);
     try {
         let {page = 1, name, priceRange, speedRange} = req.query;
         page = Number(page)
