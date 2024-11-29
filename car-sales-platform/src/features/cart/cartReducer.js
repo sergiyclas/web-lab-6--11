@@ -1,9 +1,13 @@
 const initialState = []
+const CLEAR_CART = "cart/clean";
 
 
 function cartReducer(state = initialState, action) {
     let update = [...state];
     switch (action.type) {
+        case "cart/clean":
+            localStorage.setItem("cart", JSON.stringify(initialState));
+            return initialState;
         case "cart/addItem":
             let isExist = state.find(item => item._id === action.payload._id)?._id;
 
@@ -66,3 +70,4 @@ function cartReducer(state = initialState, action) {
 }
 
 export default cartReducer
+export { CLEAR_CART };

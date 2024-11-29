@@ -32,7 +32,7 @@ function CartPage() {
                         <Button variant="outlined" onClick={() => navigate("/catalog")}>
                             Back to catalog
                         </Button>
-                        <Button variant="contained">
+                        <Button disabled={cart.length === 0} onClick={() => navigate("/checkout")} variant="contained">
                             Continue
                         </Button>
                     </Box>
